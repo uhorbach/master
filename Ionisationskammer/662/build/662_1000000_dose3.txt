@@ -1,0 +1,13 @@
+# mesh name: scorer
+# primitive scorer name: Flux
+# iZ, iPHI, iR, total(value) [percm2], total(val^2), entry
+0,0,0,0,0,0
+# primitive scorer name: NoT
+# iZ, iPHI, iR, total(value) , total(val^2), entry
+0,0,0,537873,542431,536149
+# primitive scorer name: dDep
+# iZ, iPHI, iR, total(value) [Gy], total(val^2), entry
+0,0,0,2.257180908614256e-08,4.701337981060962e-19,2041
+# primitive scorer name: eDep
+# iZ, iPHI, iR, total(value) [MeV], total(val^2), entry
+0,0,0,23.32895571096483,0.5022030367733247,2041

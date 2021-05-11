@@ -1,0 +1,9 @@
+mkdir results
+for (( i=1000000; i<5000001; i=i+1000000 ));
+  do
+  echo 
+  python3 arrange.py 662_"$i"_dose1.txt 662_"$i"_dose2.txt 662_"$i"_dose3.txt 662.txt
+done
+  mv 662.txt results
+
+done
