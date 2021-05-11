@@ -1,0 +1,24 @@
+
+for ((i=40; i<41; i=i+20));
+  do
+  echo
+cp -r runEE runC"$i"
+ cd runC"$i"
+
+  for j in {1..5}
+    do
+    echo
+      sed -i s/EE/C"$i"/g run"$j".mac
+      sed -i s/number/4852131/g run"$j".mac
+    done
+
+    g++ Zufall.cpp -o rand
+    ./rand
+    rm Zufall.cpp  rand
+ cd ..
+
+
+ cd ..
+done
+
+

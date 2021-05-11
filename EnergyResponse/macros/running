@@ -1,0 +1,23 @@
+
+for ((i=40; i<41; i=i+20));
+  do
+  echo
+  cd src
+     sed -i s/SomeFile/C"$i"/g UserDefinedPrimaryGeneratorAction.cc
+  cd ..
+     sed -i s/SomeFile/C"$i"/g main.cc
+ cd build
+ make -j4
+	./sim ../runC"$i"/run1.mac
+	./sim ../runC"$i"/run2.mac
+	./sim ../runC"$i"/run3.mac
+	./sim ../runC"$i"/run4.mac
+	./sim ../runC"$i"/run5.mac
+ cd ..
+  cd src
+     sed -i s/C"$i"/SomeFile/g UserDefinedPrimaryGeneratorAction.cc
+  cd ..
+     sed -i s/C"$i"/SomeFile/g main.cc
+done
+
+

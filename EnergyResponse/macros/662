@@ -1,0 +1,21 @@
+
+cp -r runEE run662
+ cd run662
+
+  for j in {1..5}
+    do
+    echo
+      sed -i s/EE/662/g run"$j".mac
+      sed -i s/number/2168325/g run"$j".mac
+    done
+
+    g++ Zufall.cpp -o rand
+    ./rand
+    rm Zufall.cpp  rand
+ cd ..
+
+
+ cd ..
+
+
+
