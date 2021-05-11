@@ -1,0 +1,12 @@
+mkdir results
+for (( g=150; g<251; g=g+50));
+  do
+  echo 
+for (( i=5000000; i<25000001; i=i+5000000 ));
+  do
+  echo 
+  python3 arrange.py C"$g"_"$i"_dose1.txt C"$g"_"$i"_dose2.txt C"$g"_"$i"_dose3.txt C"$g".txt
+done
+  mv C"$g".txt results
+
+done
