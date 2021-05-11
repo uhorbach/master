@@ -1,0 +1,60 @@
+/random/setSeeds 621369 674910
+######################
+/run/initialize
+
+####################################
+#### setup particle source
+####################################
+
+# default: point source, put in here more commands to change that
+
+
+/control/verbose 1
+/run/verbose 1
+/event/verbose 1
+/tracking/verbose 2
+
+
+
+/gps/particle gamma
+
+/gps/pos/type Plane
+/gps/pos/shape Square
+/gps/pos/centre 150. 0.0 0.0 cm
+/gps/pos/halfx 4 cm
+/gps/pos/halfy 4 cm
+/gps/pos/rot1 0 1 0
+/gps/pos/rot2 0 0 1
+/gps/direction -1 0 0
+
+/gps/ene/type Arb 
+/gps/hist/file ../spektren/C250.txt
+/gps/hist/inter Lin
+
+
+####################################
+#### scorer setup source
+####################################
+
+#scoringvolume
+/score/create/cylinderMesh scorer
+/score/mesh/cylinderSize 25 35 mm
+/score/mesh/nBin 1 1 1
+/score/mesh/rotate/rotateX 90 deg
+/score/mesh/translate/xyz 0 0 0 mm
+/score/quantity/energyDeposit eDep
+/score/quantity/doseDeposit dDep
+/score/quantity/nOfTrack NoT
+/score/quantity/flatSurfaceFlux Flux 1
+/score/close
+
+
+####################################
+#### run and save
+####################################	 
+
+# this shoots particles! each beamOn is one run
+/run/beamOn 5000000
+
+# save to file
+/score/dumpAllQuantitiesToFile scorer C250_5000000_dose3.txt
