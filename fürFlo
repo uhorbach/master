@@ -1,5 +1,0 @@
-Ich warne dich vor: Da ich ja nicht so eine Pogrammierqueen bin, benutze ich ne ziemich wilde Mischung zwischen python, shell und natürlich C++, je nachdem was ich so kann. Hoffe du findest dich einigermaßen zurecht. 
-
-In dem Ordner 'Ionisationskammer' mache ich die Simulation um den Proportionalitätsfaktor zwischen Teilchenanzahl und Dosis zu berechnen. Die macro-run-dateien erstelle ich immer mit dem shell-script 'loop'
-
-Die Simulation zur energy response habe ich jetzt ohne Ergebnisse reingepackt, da ja eh nix richtiges rauskommt. 
