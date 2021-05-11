@@ -1,0 +1,28 @@
+for ((i=20; i<101; i=i+20));
+  do
+  echo
+ for ((g=1000000; g<5000001; g=g+1000000));
+  do
+  echo
+
+	./sim ../runC"$i"/"$g"/run1.mac
+	./sim ../runC"$i"/"$g"/run2.mac
+	./sim ../runC"$i"/"$g"/run3.mac
+
+  done
+done
+
+for ((i=150; i<301; i=i+50));
+  do
+  echo
+ for ((g=1000000; g<5000001; g=g+1000000));
+  do
+  echo
+
+	./sim ../runC"$i"/"$g"/run1.mac
+	./sim ../runC"$i"/"$g"/run2.mac
+	./sim ../runC"$i"/"$g"/run3.mac
+
+  done
+done
+
