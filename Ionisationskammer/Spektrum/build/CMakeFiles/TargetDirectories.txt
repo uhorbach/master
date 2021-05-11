@@ -1,0 +1,3 @@
+/home/ursula/Schreibtisch/Geant4/geant4.10.05.p01/November/Spektrum/build/CMakeFiles/rebuild_cache.dir
+/home/ursula/Schreibtisch/Geant4/geant4.10.05.p01/November/Spektrum/build/CMakeFiles/sim.dir
+/home/ursula/Schreibtisch/Geant4/geant4.10.05.p01/November/Spektrum/build/CMakeFiles/edit_cache.dir

@@ -1,0 +1,57 @@
+/random/setSeeds XXXXXXX XXXXX
+#####
+/run/initialize
+
+####################################
+#### setup particle source
+####################################
+
+# default: point source, put in here more commands to change that
+
+
+/control/verbose 1
+/run/verbose 1
+/event/verbose 1
+/tracking/verbose 2
+
+#Now I want a x-ray-source with a spectrum
+
+/gps/particle gamma
+
+/gps/pos/type Plane
+/gps/pos/shape Circle
+/gps/pos/centre 100. 0.0 0.0 cm
+/gps/pos/radius 20 mm
+/gps/pos/rot1 0 1 0
+/gps/pos/rot2 0 0 1
+/gps/direction -1 0 0
+
+/gps/energy EEE keV
+/gps/ene/type Brem
+
+
+####################################
+#### scorer setup source
+####################################
+
+#scoringvolume
+/score/create/cylinderMesh D1
+/score/mesh/cylinderSize 3.01 0.1 mm
+/score/mesh/nBin 1 1 1
+/score/mesh/rotate/rotateY 90 deg
+/score/mesh/translate/xyz 0 0 0 mm
+/score/quantity/doseDeposit dDep
+/score/quantity/nOfTrack NoT
+/score/quantity/nOfCollision NoC
+/score/close
+
+
+####################################
+#### run and save
+####################################
+
+# this shoots particles! each beamOn is one run
+/run/beamOn 1000
+
+# save to file
+/score/dumpAllQuantitiesToFile D1 01dose1.txt
